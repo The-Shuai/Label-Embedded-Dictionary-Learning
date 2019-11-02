@@ -10,8 +10,8 @@ In this repository, we release the code and data for training and testing.<br>
 In our paper, the proposed LEDL is compared with some traditional machine learning [baselines](https://github.com/The-Shuai/Visual-Classifier-Baselines)
 
 ## Usage<br>
-Modify the number of training set and testing set.
-'''Matlab
+Modify the number of training set and testing set.<br>
+'''
     options.class_num            =     5;
     options.tr_num               =     10;
     options.val_num              =     5;
