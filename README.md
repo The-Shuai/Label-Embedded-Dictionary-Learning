@@ -11,6 +11,13 @@ In our paper, the proposed LEDL is compared with some traditional machine learni
 
 ## Usage<br>
 Modify the number of training set and testing set.<br>
+
+''' javascript
+if (condition){
+return true
+}
+'''
+
 '''
     options.class_num            =     5;
     options.tr_num               =     10;
