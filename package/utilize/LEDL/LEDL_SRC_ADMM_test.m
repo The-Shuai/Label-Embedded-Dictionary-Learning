@@ -49,11 +49,11 @@ while  n<maxiter
     delta = (1-gd_test)*delta + gd_test*(C - Z);
     gd_test = max(min_gd_test, gd_test*0.99);
     
-    % get the current cost
-%     cost(n) = 0.5*norm2(X - A*B) + gamma*norm1(B);
-    fold = fnew;
-    cost(n) = 0.5*(sumY+trace(C'*kernel_train*C)-2*trace(kernel_tstr*C'))+ alpha_test*norm1(C);
-    fnew = cost(n);
-%     fprintf('Iter = %.2f, cost = %.8f\n',n,cost(n));
+    %% get the current cost
+    % cost(n) = 0.5*norm2(X - A*B) + gamma*norm1(B);
+    % fold = fnew;
+    % cost(n) = 0.5*(sumY+trace(C'*kernel_train*C)-2*trace(kernel_tstr*C'))+ alpha_test*norm1(C);
+    % fnew = cost(n);
+   %  fprintf('Iter = %.2f, cost = %.8f\n',n,cost(n));
 end
 return;
