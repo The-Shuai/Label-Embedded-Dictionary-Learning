@@ -1,8 +1,26 @@
 # Label-Embedded-Dictionary-Learning
 A class shared dictionary learning method for image classification
-Created by Shuai Shao, Rui Xu, Weifeng Liu, Bao-Di Liu, Yan-Jiang Wang from China University of Petroleum.
+Created by Shuai Shao, Rui Xu, Weifeng Liu, Bao-Di Liu, Yan-Jiang Wang from China University of Petroleum.<br>
 ![image](https://github.com/The-Shuai/Label-Embedded-Dictionary-Learning/blob/master/doc/Comparasion.png)
 
-## Introduction
-In this paper, we propose a novel dictionary learning algorithm named label embedded dictionary learning (LEDL). This method introduces the $\ell_1$-norm regularization term to replace the $\ell_0$-norm regularization of LC-KSVD. Compared with $\ell_0$-norm, the sparsity constraint factor of $\ell_1$-norm is unfixed so that the basis vectors can be selected freely for linear fitting. Thus, our proposed LEDL method can get smaller errors than LC-KSVD. In addition, $\ell_1$-norm sparse representation is widely used in many fields so that our proposed LEDL method can be extended and applied easily. We show the difference between our proposed LEDL and LC-KSVD in Figure~\ref{fig:Comparision}. We adopt the alternating direction method of multipliers (ADMM)~\cite{boyd2011distributed} framework and blockwise coordinate descent (BCD)~\cite{liu2014blockwise} algorithm to optimize LEDL. Our work mainly focuses on threefold.
+## Introduction<br>
+We propose a novel dictionary learning algorithm named label embedded dictionary learning (LEDL). This method introduces the L1-norm regularization term to replace the L0-norm regularization of LC-KSVD. Compared with L0-norm, the sparsity constraint factor of L1-norm is unfixed so that the basis vectors can be selected freely for linear fitting. Thus, our proposed LEDL method can get smaller errors than LC-KSVD. In addition, L1-norm sparse representation is widely used in many fields so that our proposed LEDL method can be extended and applied easily.  You can also check out [paper](https://arxiv.org/abs/1903.03087) for a deeper introduction.<br>
+
+In this repository, we release the code and data for training and testing.<br>
+In our paper, the proposed LEDL is compared with some traditional machine learning [baselines](https://github.com/The-Shuai/Visual-Classifier-Baselines)
+
+## Usage<br>
+Modify the number of training set and testing set.
+'''Matlab
+options.class_num            =     5;
+options.tr_num               =     10;
+options.val_num              =     5;
+'''
+
+
+
+## License
+Our code is released under MIT License (see LICENSE file for details).
+
+
 
