@@ -12,9 +12,9 @@ In our paper, the proposed LEDL is compared with some traditional machine learni
 ## Usage<br>
 Modify the number of training set and testing set.
 '''Matlab
-options.class_num            =     5;
-options.tr_num               =     10;
-options.val_num              =     5;
+    options.class_num            =     5;
+    options.tr_num               =     10;
+    options.val_num              =     5;
 '''
 
 
