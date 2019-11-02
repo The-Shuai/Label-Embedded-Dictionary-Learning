@@ -1,13 +1,13 @@
 function [C] = LEDL_SRC_ADMM_test(ts_Y,B,sumY,par)
-% ÊäÈë ts_Y,B,K,alpha
-% ts_YÊÇ²âÊÔ¼¯£¬´óĞ¡ÎªD*N£»BÊÇÑµ³öÀ´µÄ×Öµä£¬´óĞ¡ÎªD*K£»alphaÊÇÏ¡ÊèÏµÊı£»
-% XÊÇÑµÁ·¼¯,´óĞ¡Îª D*N£»YÊÇ±êÇ©,´óĞ¡Îª label*N£»KÊÇ×Öµä´óĞ¡£»alphaÊÇÏ¡ÊèÏµÊı£»lambdaÊÇÇ¶Èë±êÇ©µÄÏµÊı
-% Êä³ö C
-% C,ZÎªÏ¡Êè¾ØÕó£¬C=Z,´óĞ¡Îª K*N£»
+% Input: ts_Y,B,K
+% ts_Y is testing dataï¼Œd*Nï¼›
+% B is the dictionaryï¼Œd*Kï¼›
+% Output: C
+
 K                = par.method.param.K;
 alpha_test       = par.method.param.alpha_test;
 rho_test         = par.method.param.rho_test;
-gd_test        = par.method.param.gd_test; %Ìİ¶ÈÉÏÉı²½³¤
+gd_test        = par.method.param.gd_test; 
 min_gd_test     = par.method.param.min_gd_test;
 maxiter          = par.method.maxiter;
 
