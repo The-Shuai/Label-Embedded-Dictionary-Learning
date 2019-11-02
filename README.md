@@ -9,16 +9,26 @@ We propose a novel dictionary learning algorithm named label embedded dictionary
 In this repository, we release the code and data for training and testing.<br>
 In our paper, the proposed LEDL is compared with some traditional machine learning [baselines](https://github.com/The-Shuai/Visual-Classifier-Baselines)
 
+## Citation
+if you find our work useful in your research, please consider citing:<br>
+```
+@article{shao2019label,
+  title={Label Embedded Dictionary Learning for Image Classification},
+  author={Shao, Shuai and Wang, Yan-Jiang and Liu, Bao-Di and Liu, Weifeng},
+  journal={arXiv preprint arXiv:1903.03087},
+  year={2019}
+}
+```
+
 ## Usage<br>
-Modify the number of training set and testing set.<br>
+Firstly, you should download the [datasets](https://pan.baidu.com/s/1zEDDzRB2Dbz_otDWUMflMQ)
+
+Then, modify the number of training set and testing set.<br>
 
 ```matlab 
 options.tr_num = 10; % randomly select 10 samples per class as the training data
 options.val_num = 5; % randomly select 5 samples per class as the training data
 ```
-
-
-
 ## License
 Our code is released under MIT License (see LICENSE file for details).
 
