@@ -12,16 +12,9 @@ In our paper, the proposed LEDL is compared with some traditional machine learni
 ## Usage<br>
 Modify the number of training set and testing set.<br>
 
-```javascript
-if (condition){
-return true
-}
-```
-
-```matlab
-    options.class_num            =     5;
-    options.tr_num               =     10;
-    options.val_num              =     5;
+```matlab 
+    options.tr_num = 10; % randomly select 10 samples per class as the training data
+    options.val_num = 5; % randomly select 5 samples per class as the training data
 ```
 
 
