@@ -1,21 +1,23 @@
 function [B,W] = LEDL_SRC_ADMM_train(X,tr_label,Q,par)
-% ÊäÈë X,Y,K,alpha,lambda,Q
-% XÊÇÑµÁ·¼¯,´óĞ¡Îª D*N£»YÊÇ±êÇ©,´óĞ¡Îª lable*N£»KÊÇ×Öµä´óĞ¡£»alphaÊÇÏ¡ÊèÏµÊı£»lambdaÊÇÇ¶Èë±êÇ©µÄÏµÊı
-% Êä³ö S,B,W 
-% C,ZÎªÏ¡Êè¾ØÕó£¬´óĞ¡Îª K*N,C=Z£»BÎªÑµÁ·Ñù±¾XµÄ×Öµä£¬´óĞ¡ÎªD*K£»WÎª±êÇ©YµÄ×Öµä£¬´óĞ¡Îªlabel*K
+% Input X,Y,K,alpha,lambda,Q
+% X: training data, d*Nï¼›
+% Y: label, C*Nï¼›
+% K is the size of dictionaryï¼›
+% alpha and lambda are hyperparameters
+% Output S,B,W 
 
 K                 = par.method.param.K;
 alpha_train       = par.method.param.alpha_train;
 lambda            = par.method.param.lambda;
 omega             = par.method.param.omega;
 rho_train         = par.method.param.rho_train;
-gd_train        = par.method.param.gd_train; %Ìİ¶ÈÉÏÉı²½³¤
+gd_train        = par.method.param.gd_train; %æ¢¯åº¦ä¸Šå‡æ­¥é•¿
 min_gd_train     = par.method.param.min_gd_train;
 maxiter           = par.method.maxiter;
 
 
-% ÏÈÇóY¾ØÕó
-lable = max(tr_label); % Ò»¹²ÓĞ¶àÉÙÀà
+% Compute Y
+lable = max(tr_label); % ä¸€å…±æœ‰å¤šå°‘ç±»
 Y = zeros(lable,size(X,2));
 for i=1:size(X,2)
     Y(tr_label(i),i) = 1;
@@ -35,16 +37,6 @@ fast_sthresh = @(x,th) sign(x).*max(abs(x) - th,0);
 F = 1 / (1 + lambda);
 
 rand('seed',1);
-
-
-B = rand(dimX, K)-0.5;
-BB = repmat(mean(B,1), size(B,1),1);
-BBB = B.*B;
-BBBB = sum(BBB);
-BBBBB = sqrt(BBBB);
-BBBBBB = 1./(BBBBB);
-BBBBBBB = diag(BBBBBB);
-
 
 B = rand(dimX, K)-0.5;
 B = B - repmat(mean(B,1), size(B,1),1);
@@ -113,10 +105,10 @@ while iter < maxiter
     
 %     update objective function
 %     fold = fnew;
-%     fnew1 = sum(sum((X - B * C).^2));% ÑµÁ·¼¯X²¿·Ö,L2·¶ÊıµÄÆ½·½
-%     fnew2 = lambda * sum(sum((Y - W * C).^2));% ±êÇ©Y²¿·Ö,L2·¶ÊıµÄÆ½·½
-%     fnew3 = omega * sum(sum((Q - A * C).^2));% ±êÇ©Y²¿·Ö,L2·¶ÊıµÄÆ½·½
-%     fnew4 = 2 * alpha_train * (sum(sum(abs(Z))));% Ô¼ÊøÏîSµÄL1·¶Êı
+%     fnew1 = sum(sum((X - B * C).^2));% è®­ç»ƒé›†Xéƒ¨åˆ†,L2èŒƒæ•°çš„å¹³æ–¹
+%     fnew2 = lambda * sum(sum((Y - W * C).^2));% æ ‡ç­¾Yéƒ¨åˆ†,L2èŒƒæ•°çš„å¹³æ–¹
+%     fnew3 = omega * sum(sum((Q - A * C).^2));% æ ‡ç­¾Yéƒ¨åˆ†,L2èŒƒæ•°çš„å¹³æ–¹
+%     fnew4 = 2 * alpha_train * (sum(sum(abs(Z))));% çº¦æŸé¡¹Sçš„L1èŒƒæ•°
 %     fnew = fnew1 + fnew2 + fnew3 + fnew4;
 %     obj(iter,1) = fnew;
 % 
