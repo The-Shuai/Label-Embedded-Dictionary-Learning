@@ -14,7 +14,7 @@ if you find our work useful in your research, please consider citing:<br>
 ```
 @article{shao2019label,
   title={Label Embedded Dictionary Learning for Image Classification},
-  author={Shao, Shuai and Wang, Yan-Jiang and Liu, Bao-Di and Liu, Weifeng},
+  author={Shao, Shuai and Xu, Rui and Liu, Weifeng and Liu, Bao-Di and Wang, Yan-Jiang},
   journal={arXiv preprint arXiv:1903.03087},
   year={2019}
 }
