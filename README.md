@@ -1,5 +1,5 @@
 # Label-Embedded-Dictionary-Learning
-A class shared dictionary learning method for image classification
+A class shared dictionary learning method for image classification, has been published in Neurocomputing, 2019.
 Created by Shuai Shao, Rui Xu, Weifeng Liu, Bao-Di Liu, Yan-Jiang Wang from China University of Petroleum.<br>
 ![image](https://github.com/The-Shuai/Label-Embedded-Dictionary-Learning/blob/master/doc/Comparasion.png)
 
