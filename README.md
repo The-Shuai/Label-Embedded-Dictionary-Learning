@@ -1,7 +1,7 @@
 # Label-Embedded-Dictionary-Learning
 A class shared dictionary learning method for image classification, has been published in Neurocomputing, 2019.
 Created by Shuai Shao, Rui Xu, Weifeng Liu, Bao-Di Liu, Yan-Jiang Wang from China University of Petroleum.<br>
-![image](https://github.com/The-Shuai/Label-Embedded-Dictionary-Learning/blob/master/doc/Comparasion.png)
+
 
 ## Introduction<br>
 We propose a novel dictionary learning algorithm named label embedded dictionary learning (LEDL). This method introduces the L1-norm regularization term to replace the L0-norm regularization of LC-KSVD. Compared with L0-norm, the sparsity constraint factor of L1-norm is unfixed so that the basis vectors can be selected freely for linear fitting. Thus, our proposed LEDL method can get smaller errors than LC-KSVD. In addition, L1-norm sparse representation is widely used in many fields so that our proposed LEDL method can be extended and applied easily.  You can also check out [paper](https://sci-hub.do/10.1016/j.neucom.2019.12.071) for a deeper introduction.<br>
