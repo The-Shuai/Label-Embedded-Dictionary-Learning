@@ -12,12 +12,14 @@ In our paper, the proposed LEDL is compared with some traditional machine learni
 ## Citation
 if you find our work useful in your research, please consider citing:<br>
 ```
-@article{shao2019label,
-  title={Label Embedded Dictionary Learning for Image Classification},
+@article{shao2020label,
+  title={Label embedded dictionary learning for image classification},
   author={Shao, Shuai and Xu, Rui and Liu, Weifeng and Liu, Bao-Di and Wang, Yan-Jiang},
   journal={Neurocomputing},
-  doi={10.1016/j.neucom.2019.12.071}
-  year={2019}
+  volume={385},
+  pages={122--131},
+  year={2020},
+  publisher={Elsevier}
 }
 ```
 
