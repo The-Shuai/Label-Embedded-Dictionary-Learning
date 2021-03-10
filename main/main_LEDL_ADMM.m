@@ -75,7 +75,7 @@ for i = 1:-0.5:1
                                         options.method.param.gd_test = q;
                                     end
                                     iter = 1;
-                                    for ii = 1000:1000
+                                    for ii = 1000:1007
                                         options.seed = ii;
                                         [~,accuracy(iter)] = demo_classification(fea,gnd,options);
                                     %     predict_accuracy(:,:,iter) = demo_classification(fea,gnd,options);
